@@ -1,0 +1,375 @@
+{
+    "info": {
+        "name": "Laravel API Test Collection",
+        "_postman_id": "12345678-90ab-cdef-1234-567890abcdef",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Test API Connection",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "http://127.0.0.1:8000/api/test",
+                    "host": [
+                        "http://127.0.0.1:8000/api"
+                    ],
+                    "path": [
+                        "test"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Users",
+            "item": [
+                {
+                    "name": "Get All Users",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "http://127.0.0.1:8000/api/users"
+                        }
+                    }
+                },
+                {
+                    "name": "Create User",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"username\": \"john_doe\",\n    \"password\": \"password123\",\n    \"name\": \"John Doe\",\n    \"email\": \"john@example.com\"\n}"
+                        },
+                        "url": {
+                            "raw": "http://127.0.0.1:8000/api/users"
+                        }
+                    }
+                },
+                {
+                    "name": "Get User by ID",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "http://127.0.0.1:8000/api/users/1"
+                        }
+                    }
+                },
+                {
+                    "name": "Update User",
+                    "request": {
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"name\": \"John Updated\"}"
+                        },
+                        "url": {
+                            "raw": "http://127.0.0.1:8000/api/users/1"
+                        }
+                    }
+                },
+                {
+                    "name": "Delete User",
+                    "request": {
+                        "method": "DELETE",
+                        "url": {
+                            "raw": "http://127.0.0.1:8000/api/users/1"
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Categories",
+            "item": [
+                {
+                    "name": "Get All Categories",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "http://127.0.0.1:8000/api/categories"
+                        }
+                    }
+                },
+                {
+                    "name": "Create Category",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"name\": \"Fiction\"}"
+                        },
+                        "url": {
+                            "raw": "http://127.0.0.1:8000/api/categories"
+                        }
+                    }
+                },
+                {
+                    "name": "Get Category by ID",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "http://127.0.0.1:8000/api/categories/1"
+                        }
+                    }
+                },
+                {
+                    "name": "Update Category",
+                    "request": {
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"name\": \"Science Fiction\"}"
+                        },
+                        "url": {
+                            "raw": "http://127.0.0.1:8000/api/categories/1"
+                        }
+                    }
+                },
+                {
+                    "name": "Delete Category",
+                    "request": {
+                        "method": "DELETE",
+                        "url": {
+                            "raw": "http://127.0.0.1:8000/api/categories/1"
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Books",
+            "item": [
+                {
+                    "name": "Get All Books",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "http://127.0.0.1:8000/api/books"
+                        }
+                    }
+                },
+                {
+                    "name": "Create Book",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"title\": \"Laravel 101\",\n    \"writer\": \"Jane Doe\",\n    \"user_id\": 1,\n    \"category_id\": 1,\n    \"publisher\": \"Tech Publisher\",\n    \"year\": 2023\n}"
+                        },
+                        "url": {
+                            "raw": "http://127.0.0.1:8000/api/books"
+                        }
+                    }
+                },
+                {
+                    "name": "Get Book by ID",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "http://127.0.0.1:8000/api/books/1"
+                        }
+                    }
+                },
+                {
+                    "name": "Update Book",
+                    "request": {
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"title\": \"Laravel Advanced\"}"
+                        },
+                        "url": {
+                            "raw": "http://127.0.0.1:8000/api/books/1"
+                        }
+                    }
+                },
+                {
+                    "name": "Delete Book",
+                    "request": {
+                        "method": "DELETE",
+                        "url": {
+                            "raw": "http://127.0.0.1:8000/api/books/1"
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Loans",
+            "item": [
+                {
+                    "name": "Get All Loans",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "http://127.0.0.1:8000/api/loans"
+                        }
+                    }
+                },
+                {
+                    "name": "Create Loan",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"book_id\": 1,\n    \"user_id\": 1,\n    \"loan_date\": \"2025-03-15\",\n    \"return_date\": \"2025-04-15\",\n    \"status\": \"borrowed\"\n}"
+                        },
+                        "url": {
+                            "raw": "http://127.0.0.1:8000/api/loans"
+                        }
+                    }
+                },
+                {
+                    "name": "Get Loan by ID",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "http://127.0.0.1:8000/api/loans/1"
+                        }
+                    }
+                },
+                {
+                    "name": "Update Loan",
+                    "request": {
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"status\": \"returned\"}"
+                        },
+                        "url": {
+                            "raw": "http://127.0.0.1:8000/api/loans/1"
+                        }
+                    }
+                },
+                {
+                    "name": "Delete Loan",
+                    "request": {
+                        "method": "DELETE",
+                        "url": {
+                            "raw": "http://127.0.0.1:8000/api/loans/1"
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Reviews",
+            "item": [
+                {
+                    "name": "Get All Reviews",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "http://127.0.0.1:8000/api/reviews"
+                        }
+                    }
+                },
+                {
+                    "name": "Create Review",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"book_id\": 1,\n    \"user_id\": 1,\n    \"rating\": 5,\n    \"comment\": \"Great book for Laravel beginners!\"\n}"
+                        },
+                        "url": {
+                            "raw": "http://127.0.0.1:8000/api/reviews"
+                        }
+                    }
+                },
+                {
+                    "name": "Get Review by ID",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "http://127.0.0.1:8000/api/reviews/1"
+                        }
+                    }
+                },
+                {
+                    "name": "Update Review",
+                    "request": {
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"comment\": \"Updated review comment.\"}"
+                        },
+                        "url": {
+                            "raw": "http://127.0.0.1:8000/api/reviews/1"
+                        }
+                    }
+                },
+                {
+                    "name": "Delete Review",
+                    "request": {
+                        "method": "DELETE",
+                        "url": {
+                            "raw": "http://127.0.0.1:8000/api/reviews/1"
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}
